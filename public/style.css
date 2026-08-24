@@ -6,8 +6,9 @@
 }
 
 :root {
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
+  --primary: #253c80;
+  --secondary: #f05325;
+  --primary-dark: #253c80;
   --primary-light: #eff6ff;
 
   --background: #f8fafc;
@@ -17,7 +18,7 @@
   --muted: #64748b;
   --border: #e2e8f0;
 
-  --user-message: #2563eb;
+  --user-message: #253c80;
   --bot-message: #ffffff;
 
   --sidebar-width: 280px;
@@ -63,49 +64,12 @@ body {
 }
 
 
-/* BRAND */
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  padding: 24px;
-  border-bottom: 1px solid #1e293b;
+.sidebar .logo {
+  padding: 8px;
 }
 
-.brand-logo {
-  width: 42px;
-  height: 42px;
-
-  border-radius: 12px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: linear-gradient(
-    135deg,
-    #2563eb,
-    #7c3aed
-  );
-
-  font-size: 20px;
-  font-weight: 800;
-}
-
-.brand h1 {
-  font-size: 20px;
-  line-height: 1.1;
-}
-
-.brand span {
-  display: block;
-
-  color: #94a3b8;
-  font-size: 12px;
-
-  margin-top: 3px;
+.typing-indicator .icon {
+  width: 30px;
 }
 
 
@@ -208,6 +172,10 @@ body {
 }
 
 
+.sidebar-footer a {
+  color: var(--bot-message);
+}
+
 /* MAIN */
 
 .chat-container {
@@ -244,26 +212,11 @@ body {
   gap: 12px;
 }
 
-.assistant-avatar {
-  width: 42px;
-  height: 42px;
 
-  background: linear-gradient(
-    135deg,
-    #2563eb,
-    #7c3aed
-  );
-
-  color: white;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  font-weight: 800;
+.assistant-info img {
+  width: 40px;
 }
+
 
 .assistant-info h2 {
   font-size: 15px;
@@ -350,7 +303,7 @@ body {
 
   background: linear-gradient(
     135deg,
-    #2563eb,
+    #253c80,
     #7c3aed
   );
 
@@ -430,35 +383,27 @@ body {
 }
 
 .message-avatar {
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
-
-  width: 34px;
-  height: 34px;
-
-  border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  font-size: 12px;
-  font-weight: 700;
 }
 
-.message.bot .message-avatar {
-  background: linear-gradient(
-    135deg,
-    #2563eb,
-    #7c3aed
-  );
-
-  color: white;
+.message-avatar .icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
 }
+
 
 .message.user .message-avatar {
   background: #e2e8f0;
 
   color: #334155;
+  border-radius: 50%;
 }
 
 .message-content {
@@ -592,7 +537,7 @@ body {
 .input-wrapper {
   display: flex;
 
-  align-items: flex-end;
+  align-items: center;
 
   gap: 10px;
 
@@ -608,7 +553,7 @@ body {
 }
 
 .input-wrapper:focus-within {
-  border-color: var(--primary);
+  border-color: var(--secondary);
 
   box-shadow:
     0 0 0 3px rgba(37, 99, 235, 0.08);
@@ -645,7 +590,7 @@ body {
 
   border-radius: 10px;
 
-  background: var(--primary);
+  background: var(--secondary);
 
   color: white;
 
@@ -657,7 +602,7 @@ body {
 }
 
 #sendBtn:hover {
-  background: var(--primary-dark);
+  background: var(--secondary);
 }
 
 #sendBtn:disabled {

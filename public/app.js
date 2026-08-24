@@ -101,28 +101,32 @@ async function sendMessage(message) {
 function addMessage(role, text) {
 
   const message = document.createElement("div");
-
   message.className = `message ${role}`;
 
   const avatar = document.createElement("div");
-
   avatar.className = "message-avatar";
 
-  avatar.textContent = role === "bot" ? "S" : "You";
+  if (role === "bot") {
+    avatar.innerHTML = `
+      <img
+        class="icon"
+        src="favicon.jpg"
+        alt="Somify Assistant"
+      >
+    `;
+  } else {
+    avatar.textContent = "You";
+  }
 
   const content = document.createElement("div");
-
   content.className = "message-content";
 
   const bubble = document.createElement("div");
-
   bubble.className = "message-bubble";
 
-  // Convert URLs into clickable links
   bubble.innerHTML = formatMessage(text);
 
   content.appendChild(bubble);
-
   message.appendChild(avatar);
   message.appendChild(content);
 
@@ -130,6 +134,7 @@ function addMessage(role, text) {
 
   scrollToBottom();
 }
+
 
 
 // ============================================
@@ -305,10 +310,6 @@ function clearChat() {
 
   chatMessages.innerHTML = `
     <div class="welcome">
-
-      <div class="welcome-icon">
-        S
-      </div>
 
       <h2>
         Welcome to Somify 👋

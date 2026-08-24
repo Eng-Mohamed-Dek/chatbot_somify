@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta
-    name="description"
-    content="Somify Agency AI Assistant"
-  />
+  <meta name="description" content="Somify Agency AI Assistant" />
 
   <title>Somify AI Assistant</title>
 
@@ -25,14 +20,7 @@
     <!-- Sidebar -->
     <aside class="sidebar">
 
-      <div class="brand">
-        <div class="brand-logo">S</div>
-
-        <div>
-          <h1>Somify</h1>
-          <span>AI Assistant</span>
-        </div>
-      </div>
+      <img class="logo" src="logo.png" alt="">
 
       <div class="sidebar-content">
 
@@ -47,39 +35,24 @@
             QUICK SOLUTIONS
           </p>
 
-          <button
-            class="quick-btn"
-            data-message="I run a school and need a school management system."
-          >
-            🎓 School System
+          <button class="quick-btn" data-message="I run a school and need a school management system.">
+            > School Management System
           </button>
 
-          <button
-            class="quick-btn"
-            data-message="I need a system to manage my employees."
-          >
-            👥 Employee Management
+          <button class="quick-btn" data-message="I need a system to manage my employees.">
+            > Employee Management
           </button>
 
-          <button
-            class="quick-btn"
-            data-message="I need a finance management system."
-          >
-            💰 Finance Management
+          <button class="quick-btn" data-message="I need a finance management system.">
+            > Finance Management
           </button>
 
-          <button
-            class="quick-btn"
-            data-message="I need a hospital management system."
-          >
-            🏥 Hospital Management
+          <button class="quick-btn" data-message="I need a hospital management system.">
+            > Hospital Management
           </button>
 
-          <button
-            class="quick-btn"
-            data-message="I need an inventory management system."
-          >
-            📦 Inventory Management
+          <button class="quick-btn" data-message="I need an inventory management system.">
+            > Inventory Management
           </button>
 
         </div>
@@ -87,7 +60,7 @@
       </div>
 
       <div class="sidebar-footer">
-        <p>Powered by Somify Agency</p>
+        <p>Powered by <a href="https://somifyagency.com">Somify Agency</a></p>
       </div>
 
     </aside>
@@ -101,9 +74,7 @@
 
         <div class="assistant-info">
 
-          <div class="assistant-avatar">
-            S
-          </div>
+          <img class="icon" src="favicon.jpg" alt="">
 
           <div>
             <h2>Somify Assistant</h2>
@@ -116,11 +87,7 @@
 
         </div>
 
-        <button
-          id="clearBtn"
-          class="clear-btn"
-          title="Clear conversation"
-        >
+        <button id="clearBtn" class="clear-btn" title="Clear conversation">
           Clear
         </button>
 
@@ -128,16 +95,9 @@
 
 
       <!-- Messages -->
-      <section
-        id="chatMessages"
-        class="chat-messages"
-      >
+      <section id="chatMessages" class="chat-messages">
 
         <div class="welcome">
-
-          <div class="welcome-icon">
-            S
-          </div>
 
           <h2>
             Welcome to Somify 👋
@@ -151,31 +111,19 @@
 
           <div class="suggestions">
 
-            <button
-              class="suggestion"
-              data-message="Tell me about Somify Agency."
-            >
+            <button class="suggestion" data-message="Tell me about Somify Agency.">
               What does Somify do?
             </button>
 
-            <button
-              class="suggestion"
-              data-message="I need software for my school."
-            >
+            <button class="suggestion" data-message="I need software for my school.">
               School solution
             </button>
 
-            <button
-              class="suggestion"
-              data-message="I need software for my hospital."
-            >
+            <button class="suggestion" data-message="I need software for my hospital.">
               Healthcare solution
             </button>
 
-            <button
-              class="suggestion"
-              data-message="I need a website for my business."
-            >
+            <button class="suggestion" data-message="I need a website for my business.">
               Business website
             </button>
 
@@ -187,14 +135,9 @@
 
 
       <!-- Typing indicator -->
-      <div
-        id="typingIndicator"
-        class="typing-indicator hidden"
-      >
+      <div id="typingIndicator" class="typing-indicator hidden">
 
-        <div class="message-avatar">
-          S
-        </div>
+        <img class="icon" src="favicon.jpg" alt="">
 
         <div class="typing-bubble">
           <span></span>
@@ -212,18 +155,9 @@
 
           <div class="input-wrapper">
 
-            <textarea
-              id="messageInput"
-              placeholder="Ask Somify anything..."
-              rows="1"
-              autocomplete="off"
-            ></textarea>
+            <textarea id="messageInput" placeholder="Ask Somify anything..." rows="1" autocomplete="off"></textarea>
 
-            <button
-              id="sendBtn"
-              type="submit"
-              aria-label="Send message"
-            >
+            <button id="sendBtn" type="submit" aria-label="Send message">
               ➤
             </button>
 
@@ -244,4 +178,5 @@
   <script src="/app.js"></script>
 
 </body>
+
 </html>
